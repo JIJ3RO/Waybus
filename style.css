@@ -193,19 +193,31 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--accent-200);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Asegurarse de que esté por encima de otros elementos */
 }
 
-.panic-button:hover {
-    background-color: var(--accent-100);
+/* Estilos para el botón */
+.panic-button button {
+    padding: 10px 20px;
+    background-color: #ff4747; /* Color rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Estilos para el ícono */
+.panic-button .icon {
+    margin-right: 8px;
+}
+
+/* Cambio de color de fondo y transformación suave al pasar el cursor sobre el botón */
+.panic-button button:hover {
+    background-color: #ff3c3c; /* Color rojo más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
 }
 
 /* Estilos para el menú lateral de Rutas de Camiones */
