@@ -1,0 +1,495 @@
+/* Variables de colores */
+:root {
+    --primary-color: #71c4ef;
+    --secondary-color: #00668c;
+    --bg-color: #f5f4f1;
+    --text-color: #1d1c1c;
+    --accent-100: #d4eaf7;
+    --accent-200: #b6ccd8;
+    --bg-200: #f0f0f0;
+    --text-200: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Encabezado */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('MAPA.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: rgb(0, 0, 0); /* Cambiamos el color del texto a blanco */
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold; /* Texto en negritas */
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.title, .btn {
+    color: rgb(0, 0, 0); /* Cambiamos el color del texto a blanco */
+}
+
+.btn-home .btn {
+    background-color: var(--secondary-color);
+}
+
+.btn-home .btn:hover {
+    background-color: var(--primary-color);
+}
+
+
+
+/* Barra de navegación centrada */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centramos verticalmente */
+    background-color: var(--primary-color);
+    height: 63px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: var(--accent-100);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    height: 63px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+}
+
+/* Estilos para el logo en la barra de navegación */
+.navbar .logo {
+    height: 100%; /* Altura completa de la barra de navegación */
+}
+
+.navbar .logo img {
+    max-height: 100%; /* Altura máxima igual a la altura de la barra */
+    width: auto; /* Ajustar el ancho automáticamente */
+    max-width: 100%; /* Ancho máximo igual a la barra */
+}
+
+/* Contenido general */
+.content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.box {
+    flex: 0 1 calc(33.33% - 4rem);
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 1rem rgba(255, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+.box i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem auto;
+}
+
+.box h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 1rem 0;
+}
+
+.box p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 1rem 0;
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    border: 2px solid var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    font-size: 1.2rem;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+/* Botón de pánico */
+.panic-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-200);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.panic-button:hover {
+    background-color: var(--accent-100);
+}
+
+/* Estilos para el menú lateral de Rutas de Camiones */
+.route-sidebar {
+    background-color: var(--bg-200);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 200px; /* Ajusta el ancho del menú */
+    height: 100%; /* Toma la altura completa de la sección */
+    overflow-y: auto; /* Habilitar desplazamiento si el contenido es demasiado largo */
+}
+
+.route-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.route-list li {
+    margin-bottom: 0.5rem;
+}
+
+.route-list a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--text-200);
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.route-list a:hover {
+    background-color: var(--accent-100);
+    color: var(--primary-color);
+}
+
+.routes-container {
+    background-color: var(--bg-200);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 2rem;
+}
+
+.bus-logo {
+    width: 24px; /* Ancho del logo */
+    height: 24px; /* Altura del logo */
+    margin-right: 8px; /* Espacio a la derecha del logo para separarlo del texto */
+    vertical-align: middle; /* Alineación vertical para que el logo y el texto estén centrados */
+    object-fit: cover; /* Controla cómo se ajusta el logo en caso de cambiar las dimensiones */
+}
+/* Estilos para las rutas de camiones */
+.routes {
+    padding: 2rem;
+    text-align: center;
+}
+
+.routes .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.routes p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.routes .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.routes .box {
+    flex: 0 1 calc(33.33% - 4rem);
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+.routes .route-button {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background-color: var(--bg-200);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.routes .route-button img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.routes .sub-routes {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.routes .sub-routes li {
+    margin-bottom: 0.5rem;
+}
+
+.routes .sub-routes a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--text-200);
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.routes .sub-routes a:hover {
+    background-color: var(--accent-100);
+    color: var(--primary-color);
+}
+
+/* Estilos para el mapa */
+.map-container {
+    margin-top: 2rem;
+}
+/* Estilos para la sección Nosotros */
+.about {
+    background-color: var(--bg-color);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.about h2.title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text {
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.about-image {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Estilos para la sección de Contacto */
+.contact {
+    background-color: var(--bg-color);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact .title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--bg-200);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: var(--bg-color);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: auto;
+    height: 50px;
+}
+
+.footer-info {
+    margin-top: 1rem;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-social {
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: var(--primary-color);
+}

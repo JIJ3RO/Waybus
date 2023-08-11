@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkSync</title>
+    <link rel="stylesheet" href="stylelogin.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Styles for Login Form */
+        .form {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-content {
+            margin-bottom: 1rem;
+        }
+
+        .form-header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .field {
+            margin-bottom: 1rem;
+        }
+
+        .input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .button {
+            width: 100%;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #8199d7;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #6c80c1;
+        }
+
+        .form-link {
+            margin-top: 1rem;
+        }
+
+        .link {
+            color: #8199d7;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        /* Styles for Social Media Login Buttons */
+        .media-options {
+            margin-top: 1rem;
+        }
+
+        .media-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            margin-right: 10px;
+        }
+
+        .facebook-button {
+            background-color: #3b5998;
+        }
+
+        .google-button {
+            background-color: #fff;
+            color: #555;
+        }
+
+        /* Styles specific to Google Button */
+        .google-img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header><img src="logo-removebg-preview.png" width="220px" height="120px"></header>
+                <form action="#">
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input">
+                    </div>
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="input">
+                    </div>
+                    <div class="field input-field">
+                        <select class="input">
+                            <option value="user">User</option>
+                            <option value="driver">Driver</option>
+                            <option value="admin">Administrator</option>
+                        </select>
+                    </div>
+                    <div class="field button-field">
+                        <button class="button">Login</button>
+                    </div>
+                </form>
+                <div class="form-link">
+                    <span>Forgot password? <a href="#" class="link forgot-pass">Click here</a></span>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="media-options">
+                <a href="#" class="field facebook-button">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Login with Facebook</span>
+                </a>
+            </div>
+            <div class="media-options">
+                <a href="#" class="field google-button">
+                    <img src="https://th.bing.com/th/id/OIP.EhTMbGiYfYzQnWLgjZaoJAHaHa?pid=ImgDet&rs=1" alt="" class="google-img">
+                    <span>Login with Google</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
